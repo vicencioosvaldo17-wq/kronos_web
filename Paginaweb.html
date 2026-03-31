@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kronos - Gadgets Gamer</title>
+    <style>
+        :root {
+            --azul-principal: #1E3A8A;
+            --azul-secundario: #2563EB;
+            --azul-claro: #60A5FA;
+            --gris-claro: #F3F4F6;
+            --gris-oscuro: #111827;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--gris-claro);
+            margin: 0;
+            padding: 0;
+            color: var(--gris-oscuro);
+        }
+
+        header {
+            background: var(--azul-principal);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header img {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.4em;
+            font-style: italic;
+            font-weight: bold;
+            color: var(--azul-claro);
+            margin-top: 8px;
+            animation: parpadeo 1.5s infinite;
+        }
+
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        nav {
+            background: var(--azul-secundario);
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--azul-claro);
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--azul-principal);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #374151;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        button {
+            background: var(--azul-secundario);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: var(--azul-claro);
+        }
+
+        footer {
+            background: var(--azul-principal);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .star {
+            color: #9CA3AF;
+            transition: color 0.3s;
+        }
+        .star:hover,
+        .star.selected {
+            color: var(--azul-secundario);
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+        .social a {
+            margin: 0 10px;
+            color: var(--azul-secundario);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .social a:hover {
+            color: var(--azul-claro);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- 🔗 Pega aquí el link público de tu logo (ejemplo: https://i.imgur.com/abcd123.png) -->
+        <img src="https://i.imgur.com/9JbVxOI.jpeg" alt="Logo Kronos">
+        <h1>Kronos | Gadgets</h1>
+        <p>⚡ El futuro sin retrasos ⚡</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#acerca">Acerca</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#calificacion">Califica</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenido a Kronos</h2>
+        <p>Tu tienda gamer con un enfoque profesional y elegante, donde la innovación y el estilo se encuentran.</p>
+        <button onclick="mostrarMensaje()">Explorar Gadgets</button>
+    </section>
+
+    <section id="productos">
+        <h2>Productos Destacados</h2>
+        <p>Descubre laptops, smartphones y accesorios gamer seleccionados con calidad y diseño.</p>
+    </section>
+
+    <section id="acerca">
+        <h2>Acerca de Kronos</h2>
+        <p><strong>Objetivos generales:</strong><br>
+        Brindar a nuestros clientes soluciones tecnológicas innovadoras mediante la venta de gadgets y accesorios de computación de alta calidad...</p>
+
+        <p><strong>Objetivos específicos:</strong><br>
+        ❖ Mantener nuestro catálogo siempre actualizado.<br>
+        ❖ Ofrecer precios justos.<br>
+        ❖ Brindar atención cercana y personalizada.<br>
+        ❖ Trabajar con proveedores confiables.<br>
+        ❖ Conectar con más personas a través de estrategias digitales.</p>
+
+        <p><strong>Misión:</strong><br>
+        Nuestra misión es acercar la tecnología a las personas de una manera sencilla y accesible...</p>
+
+        <p><strong>Visión:</strong><br>
+        Soñamos con convertirnos en una empresa reconocida por nuestra confianza, cercanía y pasión por ayudar...</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="social">
+            <a href="https://www.instagram.com/kronos.gat?utm_source=qr&igsh=MXJnYnVzaHgxZXRucQ==" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@kronos_tk?_r=1&_t=ZS-959rzBNYNOf" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com/share/1YHNxzE2zi/" target="_blank">Facebook</a>
+        </div>
+    </section>
+
+    <section id="calificacion">
+        <h2>Califica nuestra página</h2>
+        <div class="rating">
+            <span class="star" onclick="calificar(1)">★</span>
+            <span class="star" onclick="calificar(2)">★</span>
+            <span class="star" onclick="calificar(3)">★</span>
+            <span class="star" onclick="calificar(4)">★</span>
+            <span class="star" onclick="calificar(5)">★</span>
+        </div>
+        <p id="resultado"></p>
+    </section>
+
+    <footer>
+        © 2026 Kronos | Tecnología con estilo gamer
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+            alert("Bienvenido a Kronos, descubre lo mejor en gadgets gamer.");
+        }
+
+        function calificar(valor) {
+            let estrellas = document.querySelectorAll('.star');
+            estrellas.forEach((star, index) => {
+                star.classList.remove('selected');
+                if (index < valor) {
+                    star.classList.add('selected');
+                }
+            });
+            document.getElementById('resultado').innerText = "Gracias por tu calificación: " + valor + " estrellas ⭐";
+        }
+    </script>
+</body>
+</html>
